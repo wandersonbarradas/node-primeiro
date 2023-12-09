@@ -1,0 +1,28 @@
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home</title>
+    <link>
+</head>
+<body>
+    <h1>Pagina Home</h1>
+    <div>
+        Olá {{user.name}}!
+        {{#user.showAge}}
+            Como vai a vida?
+        {{/user.showAge}}
+    </div>
+    <h2>Lista de produtos</h2>
+    <ul>
+        {{#user.products}}
+            <li>{{name}} - R$ {{price}}</li>
+        {{/user.products}}
+    </ul>
+    <h2>Lista de ingredientes</h2>
+    <ul>
+        {{#user.receita}}
+            <li>{{.}}</li>
+        {{/user.receita}}
+    </ul>
+</body>
+</html>
