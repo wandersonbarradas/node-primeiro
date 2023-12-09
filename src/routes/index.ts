@@ -31,4 +31,12 @@ router.get("/contato", (req: Request, res: Response) => {
     res.send("Pagina Contato");
 });
 
+router.get("/user", (req: Request, res: Response) => {
+    res.json({
+        name: "João Pedro",
+        lastName: "Santos",
+        age: 27,
+    });
+});
+
 export default router;
